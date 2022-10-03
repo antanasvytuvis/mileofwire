@@ -8,12 +8,12 @@ Cisco Catalyst 2960G-8TC-L
 
 Cisco Catalyst 3560CG-8PC-S
 
+Ubiquiti UniFi 6 Lite WAP PoE
+
+Ubiquiti Unifi Video G3 Camera PoE
+
 Ivy Bridge machine running Ubuntu Server 22.04 LTS
 
 Samsung UN75JU7100
 
 Sonos Playbar, 2x Play:3, 2x Play:1
-
-Ubiquiti UniFi 6 Lite WAP PoE
-
-Ubiquiti Unifi Video G3 Camera PoE
