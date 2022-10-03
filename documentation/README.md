@@ -16,4 +16,4 @@ Ivy Bridge machine running Ubuntu Server 22.04 LTS
 
 Samsung UN75JU7100
 
-Sonos Playbar, 2x Play:3, 2x Play:1
+Sonos Playbar, 2x Play:3, 2x Play:1, 1x Connect:Amp
