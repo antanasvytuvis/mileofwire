@@ -4,6 +4,8 @@ Proposed solution: Use Dropbear SSH keys
 
 Steps taken: 
 
+
+
 installing dropbear
 
 edit /etc/dropbear-iniramfs/conf to include timeout options, disable ssh local port forwarding, disable remote port fowarding, listen Dropbear ssh server, and disable password logins (set up SSH keys ... 
@@ -13,8 +15,21 @@ DROPBEAR_OPTIONS="-I 180 -j -k -p 2222 -s"
 edit /etc/dropbear-iniramfs/initramfs.conf file to include the server static IP info... 
 IP=192.168.1.50::192.168.1.1::255.255.255.0:myliavielos
 
+update-initramfs -u -v
 
+generated SSH key pair
+in this case host machine is Windows
+OpenSSH Client
+mkdir -p $HOME/.ssh
+hope that the permissions are fine otherwise do it with icacls
 
+ssh-keygen -t ed25519 -C "My key for Myliavielos server #42"
+cp path\id_ed25519.pub path\authorized_keys
+scp .\authorized_keys av@myliavielos:~/.ssh
+
+fail at copying public keys to /etc/dropbear-initramfs/authorized_keys
+???
+<--- You are here
 
 
 
