@@ -8,7 +8,7 @@ Steps taken:
 
 installing dropbear
 
-edit /etc/dropbear-iniramfs/conf to include timeout options, disable ssh local port forwarding, disable remote port fowarding, listen Dropbear ssh server, and disable password logins (set up SSH keys ... 
+edit /etc/dropbear-iniramfs/conf to include timeout options, disable ssh local port forwarding, disable remote port fowarding, listen Dropbear ssh server, and disable password logins 
 
 DROPBEAR_OPTIONS="-I 180 -j -k -p 2222 -s" 
 
