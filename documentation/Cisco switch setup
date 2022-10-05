@@ -17,3 +17,42 @@ steps here
 https://www.comparitech.com/net-admin/configure-cisco-switches/ and https://www.youtube.com/watch?v=aNwxDNWj1LE 
 
 poe? power inline consumption default <value>
+
+Telnet access
+line vty 0 15
+pass
+login
+
+users
+line vtu 0 15
+
+login local
+exit
+
+username password
+SSH with label instead of domain or http secure server
+
+crypto key generate rsa usage-keys label R2.cisco.com modulus 768
+
+ip ssh version 2
+
+show ip ssh
+
+Error:
+>#show ssh
+%No SSHv2 server connections running.
+
+Potential cause:
+key_size must be > 2048 to work SSH v2
+
+>generate rsa usage-keys label R2.cisco.com modulus 2048
+% You already have RSA keys defined named R2.cisco.com.
+% They will be replaced.
+
+>% The key modulus size is 2048 bits
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 31 seconds)
+% Generating 2048 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 11 seconds)
+
+
