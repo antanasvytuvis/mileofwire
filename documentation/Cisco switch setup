@@ -1,0 +1,19 @@
+# Cisco C3560c
+
+Install minicom
+
+9600, ttyUSB0
+
+factory reset C3560
+
+unplug, hold mode for XX seconds
+
+flash_init, boot, write erase, delete flash:vlan.dat, erase nvram:, reload
+
+erase startup-config?
+
+steps here
+
+https://www.comparitech.com/net-admin/configure-cisco-switches/ and https://www.youtube.com/watch?v=aNwxDNWj1LE 
+
+poe? power inline consumption default <value>
