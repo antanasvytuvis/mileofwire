@@ -58,25 +58,31 @@ sudo update-initramfs -u
 
 failed with rsa key too
 
-/usr/share/initramfs-tools/scripts/panic/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/init-bottom/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/init-top/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/init-top/brltty ignored: not executable
-
-/usr/share/initramfs-tools/scripts/local-block/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/init-premount/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/local-bottom/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/local-premount/ORDER ignored: not executable
-
-/usr/share/initramfs-tools/scripts/local-top/ORDER ignored: not executable
  
+ Ignoring error
  
+ Attempting to ssh into server after reboot 
+ 
+ PS C:\WINDOWS\system32> ssh -vvv root@192.168.1.52 -i C:\Users\Me\.ssh\id_ed25519 -p 2222
+ 
+OpenSSH_for_Windows_8.1p1, LibreSSL 3.0.2
+
+debug3: Failed to open file:C:/Users/Me/.ssh/config error:2
+
+debug3: Failed to open file:C:/ProgramData/ssh/ssh_config error:2
+
+debug2: resolve_canonicalize: hostname 192.168.1.52 is address
+
+debug2: ssh_connect_direct
+
+debug1: Connecting to 192.168.1.52 [192.168.1.52] port 2222.
+
+debug3: finish_connect - ERROR: async io completed with error: 10061, io:000001D1A6D4F820
+
+debug1: connect to address 192.168.1.52 port 2222: Connection refused
+
+ssh: connect to host 192.168.1.52 port 2222: Connection refused
+
 
  
 # Equipment
