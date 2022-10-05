@@ -83,6 +83,28 @@ failed with rsa key too
 
 > ssh: connect to host 192.168.1.52 port 2222: Connection refused
 
+In attempts to troubleshoot, changed permissions of config and authentican_keys files and folders, 
+
+Added config file to Windows ~/.ssh/ specifying several arguements 
+
+Added client pub keys to /root/.ssh/authorized_keys
+
+Encountered 'man in the middle' warning, so deleted known_hosts files
+
+
+Managed to connect successfully once with ssh -i C:\Users\Me\.ssh\id_ed25519 -p 22 -o "HostKeyAlgorithms ssh-ed25519" av@192.168.1.51
+
+Unfortunately it wasnt repeatable after reboot, server was not set to static. Setting the machine to static IP and working back to the previous steps including removing the known_hosts file that had worked before only resulted in getting permissions denied after every proceeding attempt. 
+
+For ubuntu 22.04 there seems to be discrepancies in the location of some config and key files and different folder structure (dropbear-initramfs/config vs dropbear/initramfs/dropbear.conf), thus why the initial DROPBEAR-OPTIONS= line in the config file was being ignored. 
+
+The entry IP=192.168.1.50::192.168.1.1::255.255.255.0:myliavielos was intentionally commented out due to the server being DHCP, attempts to uncomment the line resulted in no network connection at boot, rendering SSH attempts futile. 
+
+Some users in the comments of https://hamy.io/post/0009/how-to-install-luks-encrypted-ubuntu-18.04.x-server-and-enable-remote-unlocking/ reported issues with Busybox (that hadnt prompted me in the one successful ssh login attempt with dropbear), buggy dropbear-initramfs package, experiencing network problems that werent alway able to have work-arounds, vlan incompatibilties with initramfs tools requring further workarounds, additional 3rd party fixes, etc, and most recent writeups are still significantly out of date in my findings. 
+
+Future need for remote access with SSH keys will likely be instead dealt with as a physical usb SSH key, or network-based key. Without a specific use case for the LUKS encryption and dropbear to bypass it remotely, the experiment is over for now. 
+
+Conclusion: Good learning experience and exercise in troubleshooting issues as they arose, ultimately turned into a task of growing complexity that exceeded the allocated time investment for a hobbyist, perhaps worth a revist if the need for the niche specialization arises. 
 
  
 # Equipment
