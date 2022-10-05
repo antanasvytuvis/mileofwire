@@ -21,6 +21,42 @@ Storage
   
   1TB Toshiba HDD
 
+# Equipment list
+
+DOCSIS 3.1 Modem from ISP
+
+Ubiquiti Edgerouter-X v2.0.9-hotfix.4
+
+Cisco Catalyst 2960G-8TC-L
+
+Cisco Catalyst 3560CG-8PC-S
+
+Ubiquiti UniFi 6 Lite WAP PoE
+
+Ubiquiti Unifi Video G3 Camera PoE
+
+Samsung UN75JU7100
+
+Sonos Playbar, 2x Play:3, 2x Play:1, 1x Connect:Amp
+
+# WIP idea/project dump 
+
+BETTER MOP
+
+SSH between switches
+
+SSL certificate 
+
+DNS mask server	
+
+Setup network services
+
+Containers and VMs 
+
+Project like Plex, setup normally, next time in a container, third time Ansible
+
+
+
 both media center and camera server
 
 Camera NVR / SSH / mobile app
