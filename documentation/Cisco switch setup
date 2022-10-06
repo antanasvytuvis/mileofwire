@@ -16,10 +16,13 @@ steps here
 
 https://www.comparitech.com/net-admin/configure-cisco-switches/ and https://www.youtube.com/watch?v=aNwxDNWj1LE 
 
-poe? power inline consumption default <value>
+***Revist later *** poe? power inline consumption default <value> 
+
+
+
 
 Telnet access
-line vty 0 15
+(config) line vty 0 15
 pass
 login
 
@@ -54,5 +57,32 @@ key_size must be > 2048 to work SSH v2
 [OK] (elapsed time was 31 seconds)
 % Generating 2048 bit RSA keys, keys will be non-exportable...
 [OK] (elapsed time was 11 seconds)
+
+show ssh giving same error as before:
+
+%No SSHv2 server connections running.
+%No SSHv1 server connections running.
+
+# Reconfigure SSH server, with hostname and domain name instead
+
+(config)#crypto key zeroize rsa
+
+(config)#ip domain-name <name>
+
+(config)#crypto key generate rsa
+
+How many bits in the modulus [512]: 2048
+
+show ssh output:
+
+%No SSHv2 server connections running.
+%No SSHv1 server connections running.
+
+Changed ip default-gateway to be in same subnet as router
+
+Destination host unreachable.
+
+
+
 
 
