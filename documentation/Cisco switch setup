@@ -18,12 +18,13 @@ https://www.comparitech.com/net-admin/configure-cisco-switches/ and https://www.
 
 ***Revist later *** poe? power inline consumption default <value> 
 
+This L3 switch is actually PoE-passthrough, adding 802.3af injector to the uplink for testing the function. 
 
 
 
-Telnet access
+Telnet/SSH access
 (config) line vty 0 15
-pass
+pass 
 login
 
 users
@@ -81,6 +82,17 @@ show ssh output:
 Changed ip default-gateway to be in same subnet as router
 
 Destination host unreachable.
+
+Changed Vlan 1 IP address to be in same subnet as router, server etc. 
+
+Ping and SSH succesful!
+
+>router>show ssh
+Connection Version Mode Encryption  Hmac         State                 Username
+0          2.0     IN   aes128-ctr  hmac-sha1    Session started       av
+0          2.0     OUT  aes128-ctr  hmac-sha1    Session started       av
+%No SSHv1 server connections running.
+
 
 
 
